@@ -6,9 +6,8 @@ category: TensorFlow
 author: milittle
 abbrlink: 8e8e4531
 date: 2018-03-14 18:49:23
+thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 ---
-
-![icon](https://s1.ax1x.com/2018/03/14/94Al7j.png)
 
 #  第一篇文章
 
