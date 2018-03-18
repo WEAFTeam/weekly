@@ -27,7 +27,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 1. TensorFlow是Google公司在2015年12月份开源的一个机器学习库，代码链接[TensorFLow](https://github.com/tensorflow/tensorflow)。
 2. 第二点为什么现在TensorFlow这么火，在人工智能界已经算得上是称霸的地位，我们可以从下面的图中可以看出TensorFlow的数据占据了一大半市场。
 
-![tf](https://s1.ax1x.com/2018/03/14/94kzp6.jpg)
+![-](https://s1.ax1x.com/2018/03/14/94kzp6.jpg)
 
 3. 原因是什么呢
    * 最主要的原因就是本身具有图运算的这个概念。使用简单，而且可以让程序员快捷的实现一些算法。从而可以用TensorFlow解决一些现实中的问题。图运算的概念我们后续会慢慢深入。大家不要着急。
@@ -40,7 +40,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 1. 首先打开电脑，这个是一定的。安装pyhon，这个也可以做到是不是。写过python代码的应该可以做到这些，我就不废话了。
 2. 去TensorFlow的[官网](https://www.tensorflow.org/install/)下载Windows的版本。点击下面红色箭头的地方---随意，都可以跳转到一个关于windows安装的界面。（可能需要科学上网，逃）
 
-![install](https://s1.ax1x.com/2018/03/14/94AS1K.png)
+![-](https://s1.ax1x.com/2018/03/14/94AS1K.png)
 
 3. 点开界面以后的注意事项：
    * windows7及其以后的操作系统版本
@@ -60,13 +60,13 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 >
 > 上面这命令的意思就是说在Anaconda管理的环境里面给我独立的创建一个python环境来，这个里面python的版本是3.5。注意一下，这个地方还没有安装tensorflow呢，上面的tensorflow只不过是创建的一个名字而已。
 
-![1521029508(1)](https://s1.ax1x.com/2018/03/14/94kjt1.png)
+![-](https://s1.ax1x.com/2018/03/14/94kjt1.png)
 
 >`activate tensorflow`
 >
 >上面的命令是激活这个tensorflow的环境，你可以通过这个环境，添加一些你自己的python库，定制自己的python环境，这也是我使用Anaconda的原因，但是并不是只有Anaconda支持这样的方式。不要和我抬杠。
 
-![1521029599(1)](https://s1.ax1x.com/2018/03/14/94kXkR.png)
+![-](https://s1.ax1x.com/2018/03/14/94kXkR.png)
 
 第四步，也就是正儿八经的安装TensorFlow的阶段，**这里解释一下，上面为什么我执行的是tensorflow1，因为我的电脑上面已经有tensorflow这个环境了**
 
@@ -74,7 +74,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 >
 >这个命令就是使用pip正常的安装tensorflow，这里的pip管理起来和普通的pip管理是一个道理，这里就不赘述了。
 
-![4](https://s1.ax1x.com/2018/03/14/94kL79.png)
+![-](https://s1.ax1x.com/2018/03/14/94kL79.png)
 
 第五步，测试TensorFlow是否安装上
 
