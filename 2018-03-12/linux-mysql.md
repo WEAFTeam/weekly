@@ -8,6 +8,7 @@ author:
 thumbnail: 'http://us-forever.com/img/mysql-linux-icon.png'
 abbrlink: 2f5dded6
 date: 2018-03-17 16:08:56
+category: Linux
 ---
 一、准备环境
 -----------
