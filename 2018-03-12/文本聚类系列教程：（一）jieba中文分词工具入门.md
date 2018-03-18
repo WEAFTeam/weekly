@@ -6,6 +6,7 @@ mathjax: true
 category: 文本聚类
 abbrlink: 575e441b
 date: 2018-03-17 17:20:22
+thumbnail: https://i.loli.net/2018/03/18/5aae7476a5f07.png
 ---
 
 >最近在学习文本分类（聚类）的相关知识，所以接下来准备先写一个关于这个方面的系列博客。
