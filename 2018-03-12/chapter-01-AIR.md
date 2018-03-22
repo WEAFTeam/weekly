@@ -9,10 +9,10 @@ date: 2018-03-14 18:49:23
 thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 ---
 
-#  第一篇文章
+#  第一篇文章-TensorFlow Install
 
-1. 首先介绍一些我们这个组织，这是有四个人构成得一个组织，组织得名称叫FOUR ELEMENTS。分别对应FLAME、EARTH、AIR、WELL。分别对应于火、地、气、水。
-2. 其次我想做一下自我介绍，我的英文学名叫milittle。我开设得这个周刊名字叫AIR-周刊。希望把握自己学习得一些内容给大家分享，也激励自己。学更多的知识。以后大家有什么要交流的，也可以一起交流。（邮箱地址会在文章末尾给出）
+1. 首先介绍一些我们这个组织，这是有四个人构成得一个组织，组织可以叫FOUR ELEMENTS。（也可以叫WEAF）分别对应WELL、EARTH、AIR、FLAME。（WEAF）。
+2. 其次我想做一下自我介绍，我的英文学名叫milittle。我开设的这个周刊名字叫AIR-周刊。希望把自己学习的一些内容分享给大家，也激励自己。学更多的知识。以后大家有什么要交流的，也可以一起交流。（邮箱地址会在文章末尾给出）
 
 接下来我讲一下我后续每周在`AIR-周刊`里面会讲到的内容：
 
@@ -37,7 +37,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 接下来我介绍一下TensorFlow的Windows CPU安装方法：
 
-1. 首先打开电脑，这个是一定的。安装pyhon，这个也可以做到是不是。写过python代码的应该可以做到这些，我就不废话了。
+1. 首先打开电脑，这个是一定的~
 2. 去TensorFlow的[官网](https://www.tensorflow.org/install/)下载Windows的版本。点击下面红色箭头的地方---随意，都可以跳转到一个关于windows安装的界面。（可能需要科学上网，逃）
 
 ![-](https://s1.ax1x.com/2018/03/14/94AS1K.png)
@@ -50,7 +50,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 接下来一步一步来：
 
-第一步、我们决定用Anaconda来安装TensorFlow，Anaconda是什么呢，它就是可以很好的管理python的一些依赖库。让你在不同python版本之间切换自如。所以我们使用这个工具来安装我们的TensorFlow。
+第一步、我们决定用Anaconda来安装TensorFlow，你要知道Anaconda是什么呢，它就是可以很好的管理python的一些依赖库。让你在不同python版本之间切换自如。所以我们使用这个工具来安装我们的TensorFlow。Anaconda也可以集成Spyder这些编程工具，使得你编写代码会方便一些。
 
 第二步、首先你去[Anaconda官网](https://www.anaconda.com/download/)下载windows版本的Anaconda，具体安装就和普通的安装软件类似。这个地方需要注意的是不同python版本需要不同的Anaconda，别下错了。
 
@@ -58,7 +58,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 > ` conda create -n tensorflow pip python=3.5`
 >
-> 上面这命令的意思就是说在Anaconda管理的环境里面给我独立的创建一个python环境来，这个里面python的版本是3.5。注意一下，这个地方还没有安装tensorflow呢，上面的tensorflow只不过是创建的一个名字而已。
+> 上面这命令的意思就是说在Anaconda管理的环境里面给我独立的创建一个python环境来，这个里面python的版本是3.5。注意一下，这个地方还没有安装tensorflow呢，上面的tensorflow只不过是创建的一个环境名字而已。
 
 ![-](https://s1.ax1x.com/2018/03/14/94kjt1.png)
 
@@ -78,8 +78,14 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 第五步，测试TensorFlow是否安装上
 
+>`python`
+>
+>上面的命令是进入python解释器，然后执行下面的import语句
+>
 >`import tensorflow as tf`
 >
->如果上面没有报错，说明你已经安装好tensorflow了，恭喜，下一次我们就要在tensorflow上面开始开发了。
+>如果上面的命令执行完，如下图中一样，就算安装成功了，下面的那些语句是写了一个hello world！！！
+
+![-](https://s1.ax1x.com/2018/03/22/9Hf66P.png)
 
 今天是为了我们以后在TensorFlow上开发所做的准备。希望大家安装顺利。我的个人邮箱是air@weaf.top。有什么问题可以单独发邮件问我。感谢你们的驻足。有什么不好的地方，可以给出意见。
