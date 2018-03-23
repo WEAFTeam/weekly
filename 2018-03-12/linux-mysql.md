@@ -76,6 +76,7 @@ SHOW MASTER STATUS;
 ```
 ![](http://us-forever.com/img/mysqlsync.png)
 要记住以上的信息，在设置从库的时候需要填写并设置。
+
 ### 4、在从库里边执行以下命令
 ``` script
 stop slave;
@@ -89,6 +90,7 @@ show slave status \G;
 内容如下：
 ![](http://us-forever.com/img/mysqlsync1.png)
 ![](http://us-forever.com/img/mysqlsync2.png)
+
 ### 6、测试与提示
 后期的测试中我们只针对**test**库进行了同步。
 所以只能针对**test**进行的操作才有效。
