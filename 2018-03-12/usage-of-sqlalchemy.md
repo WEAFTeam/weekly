@@ -9,7 +9,7 @@ thumbnail: http://ourm7pfm2.bkt.clouddn.com/18-3-18/10592292.jpg
 
 ## 前言
 
-SQLAlchemy 是 Python 世界中最常用的 SQL 工具之一，包含 SQL 渲染引擎和 ORM 两大部分。平时使用最多的就是 ORM 部分，这篇文章的重点也是 ORM。在我看来平时很多使用 ORM 的姿势是有问题的，或者说是不优雅的。所以这篇文章打算讲讲（搬运）其中一些普通的姿势和技巧（API 文档）。
+SQLAlchemy 是 Python 世界中最常用的 SQL 工具之一，包含 SQL 渲染引擎和 ORM 两大部分，平时使用最多的就是 ORM。在我看来平时很多使用 ORM 的姿势是有问题的，或者说是不优雅的。所以这篇文章打算讲讲（搬运）其中一些普通的姿势和技巧（API 文档）。
 
 ## property 和混合属性
 
@@ -141,7 +141,7 @@ class Student(Base):
 session.query(Student).filter(Student.age >= now.year - 1990, Student.age < now.year - 2000).all()
 ```
 
-如果要判断某个学生是否是 90 后的呢？又需要再写一遍：
+如果要判断某个学生是否是 90 后呢？又需要再写一遍：
 
 ```python
 if now.year - 2000 > student.age >= now.year - 1990:
@@ -237,7 +237,7 @@ from sqlalchemy.ext.associationproxy import association_proxy
 class Blog(Base):
     ...
 
-    tag_objectss = relationship(
+    tag_objects = relationship(
         'Tag', secondary=association, backref=backref('blogs', lazy='dynamic'), lazy='dynamic')
     tags = association_proxy('tag_objects', 'name')
 ```
@@ -276,7 +276,7 @@ class Blog(Base):
 
 ### 简化关联对象
 
-上面的例子里把 `association` 表作为一个普通的 `Table` 对象，是因为 `association` 中不需要保存额外信息，只需要作为 `Blog` 和 `Tag` 的中转。现在有了新的需求，我们需要知道每篇博客的标签是在什么时候加上的，这就需要在 `association` 表中增加一个额外的字段用来表示创建时间，同时为了获取这个时间，也要把 `association` 改造成一个真正的映射：
+上面的例子里把 `association` 表作为一个普通的 `Table` 对象，是因为 `association` 中不需要保存额外信息，只需要作为 `Blog` 和 `Tag` 的中转。现在有了新的需求，我们需要知道每篇博客的标签是在什么时候加上的，这就需要在 `association` 表中增加一个额外的字段用来表示创建时间，同时为了获取这个时间，还要把 `association` 改造成一个真正的映射：
 
 ```python
 class Association(Base):
