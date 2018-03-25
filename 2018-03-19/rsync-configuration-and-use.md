@@ -3,11 +3,12 @@ title: rsync的使用与配置
 description: rsync的使用与配置
 tags:
   - Linux运维
-author: 
+author:
   - earth
 thumbnail: 'http://us-forever.com/img/linux-icon.jpg'
-date: 2018-03-25 21:08:56
 category: Linux
+abbrlink: cfc65600
+date: 2018-03-25 21:08:56
 ---
 一、什么是rsync
 -------
