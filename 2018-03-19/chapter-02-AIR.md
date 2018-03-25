@@ -11,13 +11,13 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 # TensorFlow 初体验（Fashion-mnist）
 
-1. 接着上一讲的内容，想必大家已经通过我的教程安装好了TensorFlow了吧，那我们这节课通过安装简单的编译器，在这个编译器上面实现一些基本的程序。安装Spyder，这是一个简单的编译器，具体安装过程见如下阐述：
+1. 接着上一讲的内容，想必大家已经通过我的教程安装好了TensorFlow了吧，那我们这节课通过安装简单的跨平台的集成开发环境，在这个集成开发环境上面实现一些python程序。安装Spyder，这是一个简单的集成开发环境，具体安装过程见如下阐述：
 
 - 首先在应用程序里面找到Anaconda应用程序，打开里面的Anaconda Navigator，然后打开以后，选中我们上次建立好的环境tensorflow。
 
 ![-](https://s1.ax1x.com/2018/03/25/9qTXNV.png)
 
-- 选中tensorflow这个环境变量以后，看到里面有一个工具叫spyder，这个工具就是今天我们要安装的，我的已经安装好了，所以是Launch，你们的没有安装好，所以是install状态，点解安装就好。（这个地方也可能需要翻墙）
+- 选中tensorflow这个环境变量以后，看到里面有一个集成开发环境叫spyder，这个工具就是今天我们要安装的，我的已经安装好了，所以是Launch，你们的没有安装好，所以是install状态，点解安装就好。（这个地方也可能需要翻墙）
 - 这个安装好以后，你就会在应用文件夹里面出现一个Spyder(tensorflow)这个应用程序，以后你就从应用文件夹启动就好。
 - 那么启动以后：我也是启动了，出现了以下的情况：不慌，慢慢来。
 
@@ -37,7 +37,7 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 ```python
 import tensorflow as tf
 sess = tf.Session()
-init = tf.global_variables_initializer() # 此处的init是全局变量初始化器，TensorFlow的session必须执行这个初始化器才能执行前面建立好的图，所以，这个是很重要的一点，后续也会强调
+init = tf.global_variables_initializer() # 此处的init是全局变量初始化器，TensorFlow的session必须执行这个初始化器才能执行前面建立好的图，所以，这个是很重要的一点，后续也会强调（也就是后续再网络中建立变量就是通过那个初始化器来进行初始化工作的）
 sess.run(init)
 hello = tf.constant('hello world')
 print(sess.run(hello))
