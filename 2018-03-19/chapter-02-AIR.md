@@ -1,38 +1,38 @@
 ---
 title: TensorFlow 初体验
+abbrlink: b0821049
+date: 2018-03-25 21:18:37
 tags: tensorflow
 mathjax: true
 category: TensorFlow
 author: milittle
-abbrlink: 8e8e4531
-date: 2018-03-14 18:49:23
 thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 ---
 
-#  TensorFlow 初体验（Fashion-mnist）
+# TensorFlow 初体验（Fashion-mnist）
 
 1. 接着上一讲的内容，想必大家已经通过我的教程安装好了TensorFlow了吧，那我们这节课通过安装简单的编译器，在这个编译器上面实现一些基本的程序。安装Spyder，这是一个简单的编译器，具体安装过程见如下阐述：
 
-* 首先在应用程序里面找到Anaconda应用程序，打开里面的Anaconda Navigator，然后打开以后，选中我们上次建立好的环境tensorflow。
+- 首先在应用程序里面找到Anaconda应用程序，打开里面的Anaconda Navigator，然后打开以后，选中我们上次建立好的环境tensorflow。
 
 ![-](https://s1.ax1x.com/2018/03/25/9qTXNV.png)
 
-* 选中tensorflow这个环境变量以后，看到里面有一个工具叫spyder，这个工具就是今天我们要安装的，我的已经安装好了，所以是Launch，你们的没有安装好，所以是install状态，点解安装就好。（这个地方也可能需要翻墙）
-* 这个安装好以后，你就会在应用文件夹里面出现一个Spyder(tensorflow)这个应用程序，以后你就从应用文件夹启动就好。
-* 那么启动以后：我也是启动了，出现了以下的情况：不慌，慢慢来。
+- 选中tensorflow这个环境变量以后，看到里面有一个工具叫spyder，这个工具就是今天我们要安装的，我的已经安装好了，所以是Launch，你们的没有安装好，所以是install状态，点解安装就好。（这个地方也可能需要翻墙）
+- 这个安装好以后，你就会在应用文件夹里面出现一个Spyder(tensorflow)这个应用程序，以后你就从应用文件夹启动就好。
+- 那么启动以后：我也是启动了，出现了以下的情况：不慌，慢慢来。
 
 ![-](https://s1.ax1x.com/2018/03/25/9q7njH.png)
 
-* 看到上面的错误，这个错误提示是因为没有安装jedi这个依赖库，而且要求版本要大于0.9.0。那我们接下来解决一下这个问题。
+- 看到上面的错误，这个错误提示是因为没有安装jedi这个依赖库，而且要求版本要大于0.9.0。那我们接下来解决一下这个问题。
 
->小插曲，一下就可以解决，具体操作步骤
+> 小插曲，一下就可以解决，具体操作步骤
 >
->1. 还是打开上次那个AnacondaPrompt的命令行
->2. 进去以后，执行`activate tensorflow` 相当于你要在这个环境下面给这个spyder安装这个依赖
->3. 进去以后，执行`pip install jedi==0.9.0` 就可以了，然后重启spyder（可以直接在这个环境里面输入`spyder`命令就可以实现spyder的启动，你也可以在应用文件夹里面启动，性质是一样的）
->4. 不出什么意外的话，spyder使用就没有问题了，有什么问题可以发邮件给我！！！
+> 1. 还是打开上次那个AnacondaPrompt的命令行
+> 2. 进去以后，执行`activate tensorflow` 相当于你要在这个环境下面给这个spyder安装这个依赖
+> 3. 进去以后，执行`pip install jedi==0.9.0` 就可以了，然后重启spyder（可以直接在这个环境里面输入`spyder`命令就可以实现spyder的启动，你也可以在应用文件夹里面启动，性质是一样的）
+> 4. 不出什么意外的话，spyder使用就没有问题了，有什么问题可以发邮件给我！！！
 
-* 解决了上面的小插曲以后，我们在spyder中输入以下代码进行测试
+- 解决了上面的小插曲以后，我们在spyder中输入以下代码进行测试
 
 ```python
 import tensorflow as tf
@@ -45,11 +45,11 @@ print(sess.run(hello))
 
 ![-](https://s1.ax1x.com/2018/03/25/9q7r5V.png)
 
-* 上图中左面是代码书写区域，右面上半部分是变量查看区域，还有文件夹区域可以切换，右面下半部分是执行console区域，我输入上面的代码，区域打出hello world字符串
+- 上图中左面是代码书写区域，右面上半部分是变量查看区域，还有文件夹区域可以切换，右面下半部分是执行console区域，我输入上面的代码，区域打出hello world字符串
 
-2. 从上面的一些简单的测试以后，我们进入今天的主题，fashion-minist的识别，fashion-minist是一个服装识别的一个数据集，这个数据集之前的有一个mnist手写体识别数据集，手写体是对应我们手写的十个数字，然后通过设计网络来识别手写体，但是今天我们直接来做fashion-minist识别。
+1. 从上面的一些简单的测试以后，我们进入今天的主题，fashion-minist的识别，fashion-minist是一个服装识别的一个数据集，这个数据集之前的有一个mnist手写体识别数据集，手写体是对应我们手写的十个数字，然后通过设计网络来识别手写体，但是今天我们直接来做fashion-minist识别。
 
-* 闲话少说，上代码，边写边说。
+- 闲话少说，上代码，边写边说。
 
 首先这个目标是实现衣服种类的识别
 
@@ -365,10 +365,10 @@ test = fashion_mnist.test # 测试的数据
 parameters = model(train, test, learning_rate = 0.001, num_epochs = 16, graph_filename = 'fashion_mnist_costs')
 ```
 
-* 上面的代码是写好了，这里有一个python的依赖库（matplotlib）需要安装以下，同样的办法，就是进去tensorflow这个环境里面，然后执行`pip install matplotlib`就可以了。
-* 在这个过程中，可能从tensorflow下载数据的时候会很慢。（我们选择直接从上面给出下载数据集的github网址，直接下载以后，将数据拷贝在代码所在文件夹的input/data/文件夹里面，总共由四个文件组成）分别是训练数据图片、训练数据label和测试数据图片、测试数据label。这样就可以省去下载数据时候漫长的等待。
+- 上面的代码是写好了，这里有一个python的依赖库（matplotlib）需要安装以下，同样的办法，就是进去tensorflow这个环境里面，然后执行`pip install matplotlib`就可以了。
+- 在这个过程中，可能从tensorflow下载数据的时候会很慢。（我们选择直接从上面给出下载数据集的github网址，直接下载以后，将数据拷贝在代码所在文件夹的input/data/文件夹里面，总共由四个文件组成）分别是训练数据图片、训练数据label和测试数据图片、测试数据label。这样就可以省去下载数据时候漫长的等待。
 
-3. 上面就是我们使用TensorFlow实现的fashion-mnist的识别，总体根据实验结果来说，从测试集的数据来看，我达到的准确率结果是88.5%，还算可以。后续我们可能使用其他一些现有的网络结构来实现fashion-mnist的识别，看看准确率会不会提高。
+1. 上面就是我们使用TensorFlow实现的fashion-mnist的识别，总体根据实验结果来说，从测试集的数据来看，我达到的准确率结果是88.5%，还算可以。后续我们可能使用其他一些现有的网络结构来实现fashion-mnist的识别，看看准确率会不会提高。
 
 我们今天的任务量可能有一些大，就是使用神经网络对实际的一个数据集fashion-mnist数据进行服装种类的识别，大家主要看看我的代码。有什么不明白的我在代码里面都做出了注释。
 
