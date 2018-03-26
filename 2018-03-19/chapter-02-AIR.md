@@ -1,8 +1,8 @@
 ---
-title: TensorFlow 初体验
+title: TensorFlow 初体验 （Fashion-mnist）
 abbrlink: b0821049
 date: 2018-03-25 21:18:37
-tags: tensorflow
+tags: TensorFlow
 mathjax: true
 category: TensorFlow
 author: milittle
@@ -11,13 +11,13 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 # TensorFlow 初体验（Fashion-mnist）
 
-1. 接着上一讲的内容，想必大家已经通过我的教程安装好了TensorFlow了吧，那我们这节课通过安装简单的跨平台的集成开发环境，在这个集成开发环境上面实现一些python程序。安装Spyder，这是一个简单的集成开发环境，具体安装过程见如下阐述：
+1. 接着上一讲的内容，想必大家已经通过我的教程安装好了TensorFlow了吧，那我们这节课通过安装简单的跨平台的集成开发环境Spyder，在这个集成开发环境上面实现一些python程序。具体安装过程见如下阐述：
 
 - 首先在应用程序里面找到Anaconda应用程序，打开里面的Anaconda Navigator，然后打开以后，选中我们上次建立好的环境tensorflow。
 
 ![-](https://s1.ax1x.com/2018/03/25/9qTXNV.png)
 
-- 选中tensorflow这个环境变量以后，看到里面有一个集成开发环境叫spyder，这个工具就是今天我们要安装的，我的已经安装好了，所以是Launch，你们的没有安装好，所以是install状态，点解安装就好。（这个地方也可能需要翻墙）
+- 选中tensorflow这个环境变量以后，看到里面有一个集成开发环境叫spyder，这个工具就是今天我们要安装的，我的已经安装好了，所以是Launch，你们的没有安装好，所以是install状态，点解安装就好。（这个地方也可能需要翻墙）。
 - 这个安装好以后，你就会在应用文件夹里面出现一个Spyder(tensorflow)这个应用程序，以后你就从应用文件夹启动就好。
 - 那么启动以后：我也是启动了，出现了以下的情况：不慌，慢慢来。
 
@@ -25,19 +25,25 @@ thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
 
 - 看到上面的错误，这个错误提示是因为没有安装jedi这个依赖库，而且要求版本要大于0.9.0。那我们接下来解决一下这个问题。
 
-> 小插曲，一下就可以解决，具体操作步骤
+> 小插曲，一下就可以解决，具体操作步骤:
 >
 > 1. 还是打开上次那个AnacondaPrompt的命令行
 > 2. 进去以后，执行`activate tensorflow` 相当于你要在这个环境下面给这个spyder安装这个依赖
 > 3. 进去以后，执行`pip install jedi==0.9.0` 就可以了，然后重启spyder（可以直接在这个环境里面输入`spyder`命令就可以实现spyder的启动，你也可以在应用文件夹里面启动，性质是一样的）
 > 4. 不出什么意外的话，spyder使用就没有问题了，有什么问题可以发邮件给我！！！
 
-- 解决了上面的小插曲以后，我们在spyder中输入以下代码进行测试
+- 解决了上面的小插曲以后，我们在spyder中输入以下代码进行测试。
 
 ```python
 import tensorflow as tf
 sess = tf.Session()
-init = tf.global_variables_initializer() # 此处的init是全局变量初始化器，TensorFlow的session必须执行这个初始化器才能执行前面建立好的图，所以，这个是很重要的一点，后续也会强调（也就是后续再网络中建立变量就是通过那个初始化器来进行初始化工作的）
+init = tf.global_variables_initializer() 
+# 此处的init是全局变量初始化器，
+# TensorFlow的session必须执行这个初始化器才能执行前面建立好的图，
+# 所以，这个是很重要的一点，后续也会强调
+#（也就是后续再网络中建立变量就是通过那个初始化器来进行初始化工作的）
+# 其实在没有变量的时候，这个初始化器是不需要的
+# 但是为了让大家形成习惯，还是写上
 sess.run(init)
 hello = tf.constant('hello world')
 print(sess.run(hello))
@@ -45,17 +51,17 @@ print(sess.run(hello))
 
 ![-](https://s1.ax1x.com/2018/03/25/9q7r5V.png)
 
-- 上图中左面是代码书写区域，右面上半部分是变量查看区域，还有文件夹区域可以切换，右面下半部分是执行console区域，我输入上面的代码，区域打出hello world字符串
+- 上图中左面是代码书写区域，右面上半部分是变量查看区域，还有文件夹区域可以切换，右面下半部分是执行console区域，我输入上面的代码，执行以后console区域打出hello world字符串。
 
-1. 从上面的一些简单的测试以后，我们进入今天的主题，fashion-minist的识别，fashion-minist是一个服装识别的一个数据集，这个数据集之前的有一个mnist手写体识别数据集，手写体是对应我们手写的十个数字，然后通过设计网络来识别手写体，但是今天我们直接来做fashion-minist识别。
+2. 从上面的一些简单的测试以后，我们进入今天的主题，fashion-minist的识别，fashion-minist是一个服装识别的一个数据集，在这个数据集之前有一个mnist手写体识别数据集，这个手写数据集对应我们手写的十个数字，然后通过设计网络来识别手写体。但是今天我们不做手写体识别，直接来做fashion-minist识别。
 
 - 闲话少说，上代码，边写边说。
 
-首先这个目标是实现衣服种类的识别
+首先目标是实现衣服种类的识别。
 
-数据可以在 [Zalando_Fashion_MNIST_repository](https://github.com/zalandoresearch/fashion-mnist)这个github仓库获取
+数据可以在 [Zalando_Fashion_MNIST_repository](https://github.com/zalandoresearch/fashion-mnist)这个Github仓库获取。
 
-数据分为60000训练数据和10000测试数据，图片都是灰度图片，大小为28 X 28，总共也是由10类组成
+数据分为60000训练数据和10000测试数据，图片都是灰度图片，大小为28 X 28，总共也是由10类组成。
 
 ```python
 # -*- coding: utf-8 -*-
@@ -122,8 +128,8 @@ def create_placeholders(n_x, n_y):
     n_y -- 向量, 种类数目 (从 0 到 9, 所以是 -> 10种)
     
     返回参数:
-    X -- 为输入图片大小的placeholder shape是[784, None] None在这里表示以后输入的数据可以任意多少
-    Y -- 为输出种类大小的placeholder shape是[10, None]
+    X -- 为输入图片大小的placeholder shape是[784, None] 
+    Y -- 为输出种类大小的placeholder shape是[10, None] None在这里表示以后输入的数据可以任意多少
     """
     
     X = tf.placeholder(tf.float32, [n_x, None], name="X")
@@ -368,8 +374,60 @@ parameters = model(train, test, learning_rate = 0.001, num_epochs = 16, graph_fi
 - 上面的代码是写好了，这里有一个python的依赖库（matplotlib）需要安装以下，同样的办法，就是进去tensorflow这个环境里面，然后执行`pip install matplotlib`就可以了。
 - 在这个过程中，可能从tensorflow下载数据的时候会很慢。（我们选择直接从上面给出下载数据集的github网址，直接下载以后，将数据拷贝在代码所在文件夹的input/data/文件夹里面，总共由四个文件组成）分别是训练数据图片、训练数据label和测试数据图片、测试数据label。这样就可以省去下载数据时候漫长的等待。
 
-1. 上面就是我们使用TensorFlow实现的fashion-mnist的识别，总体根据实验结果来说，从测试集的数据来看，我达到的准确率结果是88.5%，还算可以。后续我们可能使用其他一些现有的网络结构来实现fashion-mnist的识别，看看准确率会不会提高。
+3. 上面就是我们使用TensorFlow实现的fashion-mnist的识别，总体根据实验结果来说，从测试集的数据来看，我达到的准确率结果是88.5%，还算可以。后续我们可能使用其他一些现有的网络结构来实现fashion-mnist的识别，看看准确率会不会提高。
+4. 如下是我对上面TensorFLow出现的方法介绍：
 
-我们今天的任务量可能有一些大，就是使用神经网络对实际的一个数据集fashion-mnist数据进行服装种类的识别，大家主要看看我的代码。有什么不明白的我在代码里面都做出了注释。
+```python
+tf.placeholders(
+	dtype,
+	shape=None,
+	name=None
+)
+从参数上面看到，总共有三个参数：
+	dtype：在tensor中被喂数据的元素类型
+	shape: tensor的shape
+	name：命名
+说明一下，这个函数返回的是一个tensor，在TensorFlow里面，tensor是一个很重要的概念，大家务必掌握，也叫张量，比如我们的一个数:就是0-阶张量，也叫标量。一个向量，就是1-阶张量。一个矩阵，就是2-阶张量，后面的就是一直往高维了走，对应的就是多少阶张量。
+这个方法，很重要的原因也在于它是定义在Session执行run的时候，在后面填充数据的占位符，也就是feed_dict这个变量里面的数据，所以大家，务必记住这一关键的概念。后续用起来就会很顺手。
+tf.get_variable()
+这个方法后续在展开来说，你先理解就是使用它可以定义变量（保存权重和偏置项的），还可以加一些优化器，比如说正则优化器等等
+tf.matmul(
+	a,
+	b,
+)
+展示给你们列出这两个参数：
+	a：就是待操作的矩阵1
+	b: 就是待操作的矩阵2
+函数功能就是实现矩阵的相乘运算（当然要符合基本的矩阵运算格式）
+tf.transpose(
+	a,
+)
+先列出来一个参数，就是矩阵的转置
+Session().run(
+	fetches,
+	feed_list=None,
+	)
+这个方法就是运行图。很关键，先掌握两个参数:
+	fetches: 你要从图里面取出的数据（）
+	feed_list: 你要给图喂的数据（输入和label数据就是用这样的方式来做的）
+    比如我们训练的网络中输入的图片信息和对应的label信息
+tf.reduce_mean(
+	input_tensor,
+	axis=None,
+	keepdims=None,
+	name=None,
+	redcution_indices=None,
+	keep_dims=None
+	)
+计算输入tensor的总和：
+	input_tensor: 要叠加的tensor
+	axis: 选择那个维度叠加
+	keepdims: 叠加元素以后，保留原来的维度信息
+	name：就是名字
+	redcution_indices：被axis取代
+	keep_dims：被keepdims取代
+```
+
+我们今天的任务量可能有一些大，大家坚持。总的来说就是使用神经网络对实际的一个fashion-mnist数据集进行服装种类的识别，大家主要看看我的代码。有什么不明白的我在代码里面都做出了注释。
 
 邮箱------air@weaf.top欢迎来探讨

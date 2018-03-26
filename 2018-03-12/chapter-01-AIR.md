@@ -1,6 +1,6 @@
 ---
 title: chapter-01-AIR
-tags: tensorflow
+tags: TensorFlow
 mathjax: true
 category: TensorFlow
 author: milittle
