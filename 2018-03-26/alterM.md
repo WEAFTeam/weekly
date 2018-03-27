@@ -1,11 +1,12 @@
 ---
 title: 修改pip全局镜像
-date: 2018-03-27 20:29:36
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
 author: milittle
-thumbnail: https://s1.ax1x.com/2018/03/18/9oakkQ.png
+thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
+abbrlink: '233074e6'
+date: 2018-03-27 20:29:36
 ---
 
 ### 修改pip全局镜像
