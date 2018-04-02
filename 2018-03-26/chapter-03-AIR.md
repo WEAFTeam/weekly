@@ -1,11 +1,12 @@
 ---
 title: TensorFlow 建立网络模型
-date: 2018-03-31 18:23:35
 tags: TensorFlow
 category: TensorFlow
 author: milittle
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
+abbrlink: 5b7df854
+date: 2018-03-31 18:23:35
 ---
 
 # TensorFlow 建立网络模型

@@ -4,6 +4,8 @@ author: Leno
 tags: 文本聚类
 mathjax: true
 category: 文本聚类
+thumbnail: 'https://i.loli.net/2018/04/02/5ac1826f0d299.png'
+abbrlink: a751f7e5
 date: 2018-03-30 14:00:08
 ---
 
@@ -207,6 +209,7 @@ print(txt3)
 
 **结果：**
 
-[![9zP9aR.png](https://s1.ax1x.com/2018/04/01/9zP9aR.png)](https://imgchr.com/i/9zP9aR)
+![tfidfResult.png](https://s1.ax1x.com/2018/04/01/9zP9aR.png)
 
-本次的学习会用到很多numpy的知识，请大家自行查阅~如有兴趣，请思考为什么在新的权值矩阵中“来到”一词的权重变成了0。感谢大家的阅读~
+
+本次的学习会用到很多numpy的知识，请大家自行查阅。如有兴趣，请思考为什么在新的权值矩阵中“来到”一词的权重变成了0。感谢大家的阅读~
