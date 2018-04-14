@@ -194,12 +194,15 @@ def get_all_vector(file_path):
 	idf =  np.log(column_sum)
     idf =  np.diag(idf)
     
-	for doc_v in docs_matrix:
+	i = 0    
+    for doc_v in docs_matrix:    
         if doc_v.sum() == 0:
-            doc_v = doc_v / 1
+            docs_matrix[i] = docs_matrix[i]/1
         else:
-            doc_v = doc_v / (doc_v.sum())
-        tfidf = np.dot(docs_matrix,idf)
+            docs_matrix[i] = docs_matrix[i] / (doc_v.sum())
+        i+=1
+    
+	tfidf = np.dot(docs_matrix,idf)
     return names,tfidf
 
 txt3 = get_all_vector('txt1')
@@ -209,7 +212,7 @@ print(txt3)
 
 **结果：**
 
-![tfidfResult.png](https://s1.ax1x.com/2018/04/01/9zP9aR.png)
+![tfidfResult.png](https://i.loli.net/2018/04/14/5ad1988749e40.png)
 
 
 本次的学习会用到很多numpy的知识，请大家自行查阅。如有兴趣，请思考为什么在新的权值矩阵中“来到”一词的权重变成了0。感谢大家的阅读~
