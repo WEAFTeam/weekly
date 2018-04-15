@@ -1,11 +1,12 @@
 ---
 title: Vigenere密码加密解密
-date: 2018-04-14 22:11:24
 tags: 密码学
 mathjax: true
 category: 密码学
 author: Leno
 thumbnail: 'https://i.loli.net/2018/04/15/5ad30ff4d44d1.png'
+abbrlink: 8b092926
+date: 2018-04-14 22:11:24
 ---
 
 >今天换个口味，写点原来从没接触过的东西--密码学。前一阵信息安全课上留了一个作业，实现Vigenere加密解密，借着机会写篇博客。这次博客由于比较仓促，这次只写加密解密系统的实现，不涉及唯密文破解。
