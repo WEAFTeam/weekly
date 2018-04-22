@@ -1,11 +1,12 @@
 ---
 title: chapter-05-AIR
-date: 2018-04-15 22:14:23
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: milittle
+abbrlink: 7b0ee3f1
+date: 2018-04-15 22:14:23
 ---
 
 # TensorFlow 基础（2）

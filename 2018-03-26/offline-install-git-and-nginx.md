@@ -7,6 +7,7 @@ author:
   - earth
 thumbnail: 'http://nginx.org/nginx.png'
 category: Linux
+abbrlink: a86291b8
 date: 2018-04-01 12:07:12
 ---
 一、准备工作
