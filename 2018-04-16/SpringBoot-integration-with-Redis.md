@@ -7,6 +7,7 @@ author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/redis-logo.png'
 category: JAVA
+abbrlink: 2b2e3e2f
 date: 2018-04-18 17:57:12
 ---
 今天开始给大家分享Java相关的技术开发知识，在以后的开发和学习中，还希望大家多多指教，对于我发表的相关内容，如有错误，请大家指出来，一起学习。
