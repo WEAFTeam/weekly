@@ -1,8 +1,8 @@
 ---
-title: Linux下MySQL安装
-description: Linux下MySQL安装
+title: Redis在SpringBoot 2.0中的整合
+description: Redis在SpringBoot 2.0中的整合
 tags:
-  - Linux运维
+  - JAVA
 author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/redis-logo.png'
