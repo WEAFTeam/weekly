@@ -7,7 +7,6 @@ author:
   - earth
 thumbnail: 'https://labs.mysql.com/common/logos/mysql-logo.svg?v2'
 category: Linux
-abbrlink: 2cd32dfc
 date: 2018-04-17 12:07:12
 ---
 接下来我将介绍3种方法安装MySQL
