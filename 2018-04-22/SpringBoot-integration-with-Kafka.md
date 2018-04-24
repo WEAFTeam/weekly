@@ -55,17 +55,17 @@ pom文件加入以下依赖
 ##### pom.xml
 ``` xml
 <!-- kafka -->
-		<dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka</artifactId>
-			<version>2.1.5.RELEASE</version>
-		</dependency>
+<dependency>
+	<groupId>org.springframework.kafka</groupId>
+	<artifactId>spring-kafka</artifactId>
+	<version>2.1.5.RELEASE</version>
+</dependency>
 ```
 
 我这里SpringBoot的配置文件使用的是YAML。
 在相应环境中配置Kafka
 ##### application-local.yml
-``` xml
+``` yml
 server:
     port: 7777
 
