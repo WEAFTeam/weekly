@@ -58,7 +58,7 @@ pom文件加入以下依赖
 我这里SpringBoot的配置文件使用的是YAML。
 在相应环境中配置Redis
 ##### application-local.yml
-```
+``` yml
 spring:
     datasource:
         name: test
