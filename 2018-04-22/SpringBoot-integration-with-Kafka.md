@@ -215,6 +215,7 @@ public class TestController {
 五、SpringBoot-Demo
 ------
 本人最近使用阿里云的Kafka发现没有SpringBoot的Demo便写了一个。
+
 代码地址：[https://github.com/songyaxu/kafka-springboot-demo](https://github.com/songyaxu/kafka-springboot-demo)
 
 本文参考地址[https://docs.spring.io/spring-kafka/docs/2.1.5.RELEASE/reference/html/](https://docs.spring.io/spring-kafka/docs/2.1.5.RELEASE/reference/html/)
