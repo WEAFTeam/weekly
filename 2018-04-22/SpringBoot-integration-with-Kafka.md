@@ -13,6 +13,7 @@ date: 2018-04-23 18:13:02
 一、Windows平台Kafka的环境搭建
 ------------
 注意：确保JAVA环境变量的正确
+
 ### 1.ZooKeeper的安装
 Kafka的运行依赖于Zookeeper，所以需要先安装Zookeeper.
 Zookeeper下载地址：[Zookeeper](http://mirror.bit.edu.cn/apache/zookeeper/)
@@ -27,6 +28,7 @@ dataLogDir=D:\data\logs\zookeeper
 ```
 然后进入bin目录双击zkServer.cmd运行。如下图：
 ![kafka-2](https://weaf.oss-cn-beijing.aliyuncs.com/kafka-2.png)
+
 ### 2.Kafka的安装
 Kafka下载地址：[Kafka](http://kafka.apache.org/downloads.html )
 ![kafka-3](https://weaf.oss-cn-beijing.aliyuncs.com/kafka-3.png)
@@ -40,11 +42,12 @@ log.dirs=D:\data\logs\kafka
 我们在根目录下打开命令行，运行以下命令启动Kafka。
 我们在运行前需要注意以下几点
 
-	1.确认JAVA环境变量没有问题
-	2.路径不能有空格，不然可能会出现无法加载主类的错误。
-	3.出现无法加载主类错误，可修改bin\windows目录中的kafka-run-class.bat中
-	set COMMAND=%JAVA% %KAFKA_HEAP_OPTS% %KAFKA_JVM_PERFORMANCE_OPTS% %KAFKA_JMX_OPTS% %KAFKA_LOG4J_OPTS% -cp %CLASSPATH% %KAFKA_OPTS% %* 
-	中"%CLASSPATH%"加上双引号
+1. 确认JAVA环境变量没有问题
+2. 路径不能有空格，不然可能会出现无法加载主类的错误。
+3. 出现无法加载主类错误，可修改bin\windows目录中的kafka-run-class.bat中
+set COMMAND=%JAVA% %KAFKA_HEAP_OPTS% %KAFKA_JVM_PERFORMANCE_OPTS% %KAFKA_JMX_OPTS% %KAFKA_LOG4J_OPTS% -cp %CLASSPATH% %KAFKA_OPTS% %* 
+中"%CLASSPATH%"加上双引号
+
 ![kafka-3](https://weaf.oss-cn-beijing.aliyuncs.com/kafka-4.png)
 ``` xml
 .\bin\windows\kafka-server-start.bat .\config\server.properties
@@ -56,17 +59,17 @@ pom文件加入以下依赖
 ##### pom.xml
 ``` xml
 <!-- kafka -->
-<dependency>
-	<groupId>org.springframework.kafka</groupId>
-	<artifactId>spring-kafka</artifactId>
-	<version>2.1.5.RELEASE</version>
-</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>2.1.5.RELEASE</version>
+		</dependency>
 ```
 
 我这里SpringBoot的配置文件使用的是YAML。
 在相应环境中配置Kafka
 ##### application-local.yml
-``` yml
+``` xml
 server:
     port: 7777
 
@@ -104,6 +107,7 @@ app:
 ```
 可以仅关注spring.kafka和app.topic节点
 更多spring.kafka配置信息请查看[官网文档](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+
 三、代码
 ---------
 主要代码结构
@@ -207,5 +211,10 @@ public class TestController {
 ![kafka-6](https://weaf.oss-cn-beijing.aliyuncs.com/kafka-7.png)
 查看接收结果：
 ![kafka-6](https://weaf.oss-cn-beijing.aliyuncs.com/kafka-8.png)
+
+五、SpringBoot-Demo
+------
+本人最近使用阿里云的Kafka发现没有SpringBoot的Demo便写了一个。
+代码地址：[https://github.com/songyaxu/kafka-springboot-demo](https://github.com/songyaxu/kafka-springboot-demo)
 
 本文参考地址[https://docs.spring.io/spring-kafka/docs/2.1.5.RELEASE/reference/html/](https://docs.spring.io/spring-kafka/docs/2.1.5.RELEASE/reference/html/)
