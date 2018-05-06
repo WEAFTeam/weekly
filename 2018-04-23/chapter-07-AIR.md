@@ -8,7 +8,7 @@ thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: milittle
 ---
 
-# TensorFlow Linear Regression
+# TensorFlow Linear Regression 1
 
 亲爱的小伙伴们，上周又事情给耽搁了，这周将上周的内容一起补充一下。我们前面的内容将TensorFlow的基础内容都介绍了，所以接下来我们需要实现一些基本的算法，如果大家想跑一些现在主流的一些网络结构，大家可以移步到我的GitHub MLModel这个仓库[MLModel](https://github.com/Milittle/MLModel)，里面会定期更新一些主流的网络框架。喜欢的话，给个star可好。接下来呢我们开始我们今天的线性回归模型的各种求解方法。
 
