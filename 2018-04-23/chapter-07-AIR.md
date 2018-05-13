@@ -1,11 +1,12 @@
 ---
 title: chapter-07-AIR
-date: 2018-05-06 11:29:55
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: milittle
+abbrlink: 1ceb091
+date: 2018-05-06 11:29:55
 ---
 
 # TensorFlow Linear Regression 1
