@@ -1,11 +1,12 @@
 ---
 title: chapter-10-AIR
-date: 2018-05-20 19:52:00
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: milittle
+abbrlink: 78b2bf24
+date: 2018-05-20 19:52:00
 ---
 
 # TensorFlow SVM

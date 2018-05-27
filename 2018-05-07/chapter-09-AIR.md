@@ -1,11 +1,12 @@
 ---
 title: chapter-09-AIR
-date: 2018-05-20 19:31:09
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: milittle
+abbrlink: befe0ef0
+date: 2018-05-20 19:31:09
 ---
 
 # TensorFlow Logistic Regression

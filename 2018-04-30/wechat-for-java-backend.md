@@ -7,6 +7,7 @@ author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/wechat-logo.png'
 category: JAVA
+abbrlink: 637facd6
 date: 2018-05-01 18:13:02
 ---
 现在微信在中国作为最重要的社交软件，相信很多人都使用微信公众号。
