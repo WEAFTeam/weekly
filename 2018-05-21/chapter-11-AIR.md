@@ -1,11 +1,12 @@
 ---
 title: chapter-11-AIR
-date: 2018-05-29 11:27:34
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: milittle
+abbrlink: 45d29694
+date: 2018-05-29 11:27:34
 ---
 
 # TensorFlow 实现Siamese Network
