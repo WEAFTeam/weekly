@@ -5,7 +5,7 @@ tags:
   - JAVA
 author:
   - earth
-thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/springboot.png'
+thumbnail: 'https://spring.io/img/homepage/icon-spring-framework.svg'
 category: JAVA
 date: 2018-05-21 02:04:44
 ---
@@ -17,6 +17,7 @@ date: 2018-05-21 02:04:44
 在Spring中，我们通过@transactional来启用事务。
 
 二、@transactional详解
+========================
 
 ### @Transactional注解中常用参数说明
 
@@ -24,8 +25,7 @@ date: 2018-05-21 02:04:44
 | --- | --- |
 |rollbackFor|该属性用于设置需要进行回滚的异常类数组，当方法中抛出指定异常数组中的异常时，则进行事务回滚。例如：指定单一异常类：@Transactional(rollbackFor=RuntimeException.class)
 指定多个异常类：@Transactional(rollbackFor={RuntimeException.class, Exception.class})|
-|rollbackForClassName|该属性用于设置需要进行回滚的异常类名称数组，当方法中抛出指定异常名称数组中的异常时，则进行事务回滚。例如：
-指定单一异常类名称：@Transactional(rollbackForClassName="RuntimeException")
+|rollbackForClassName|该属性用于设置需要进行回滚的异常类名称数组，当方法中抛出指定异常名称数组中的异常时，则进行事务回滚。例如：指定单一异常类名称：@Transactional(rollbackForClassName="RuntimeException")
 指定多个异常类名称：@Transactional(rollbackForClassName={"RuntimeException","Exception"})|
 |noRollbackFor|该属性用于设置不需要进行回滚的异常类数组，当方法中抛出指定异常数组中的异常时，不进行事务回滚。例如：指定单一异常类：@Transactional(noRollbackFor=RuntimeException.class)
 指定多个异常类：@Transactional(noRollbackFor={RuntimeException.class, Exception.class})|
@@ -56,10 +56,22 @@ date: 2018-05-21 02:04:44
 - **@Transactional(isolation = Isolation.READ_COMMITTED)**：读取已提交数据(会出现不可重复读和幻读)
 - **@Transactional(isolation = Isolation.REPEATABLE_READ)**：可重复读(会出现幻读)
 - **@Transactional(isolation = Isolation.SERIALIZABLE)**：串行化
-　　MYSQL: 默认为REPEATABLE_READ级别
-　　SQLSERVER: 默认为READ_COMMITTED
-**脏读** : 一个事务读取到另一事务未提交的更新数据
-**不可重复读** : 在同一事务中, 多次读取同一数据返回的结果有所不同, 换句话说, 
+
+- MYSQL: 默认为REPEATABLE_READ级别
+- SQLSERVER: 默认为READ_COMMITTED
+
+- **脏读** : 一个事务读取到另一事务未提交的更新数据
+- **不可重复读** : 在同一事务中, 多次读取同一数据返回的结果有所不同, 换句话说, 
 后续读取可以读到另一事务已提交的更新数据. 相反, "可重复读"在同一事务中多次
 读取数据时, 能够保证所读数据一样, 也就是后续读取不能读到另一事务已提交的更新数据
-**幻读** : 一个事务读到另一个事务已提交的insert数据
+- **幻读** : 一个事务读到另一个事务已提交的insert数据
+
+三、特别需要注意的几点
+
+1. spring 事务管理器,由spring来负责数据库的打开,提交,回滚.默认遇到运行期例外(throw new RuntimeException("注释");)会回滚，即遇到不受检查（unchecked）的例外时回滚；而遇到需要捕获的例外(throw new Exception("注释");)不会回滚,即遇到受检查的例外（就是非运行时抛出的异常，编译器会检查到的异常叫受检查例外或说受检查异常）时，需我们指定方式来让事务回滚要想所有异常都回滚,要加上 @Transactional( rollbackFor={Exception.class,其它异常}) .如果让unchecked例外不回滚
+2. @Transactional 注解应该只被应用到 public 可见度的方法上。 如果你在 protected、private 或者 package-visible 的方法上使用 @Transactional 注解，它也不会报错， 但是这个被注解的方法将不会展示已配置的事务设置。
+3. @Transactional 注解可以被应用于接口定义和接口方法、类定义和类的 public 方法上。然而，请注意仅仅 @Transactional 注解的出现不足于开启事务行为，它仅仅 是一种元数据，能够被可以识别 @Transactional 注解和上述的配置适当的具有事务行为的beans所使用。上面的例子中，其实正是 元素的出现 开启 了事务行为。
+4. Spring团队的建议是你在具体的类（或类的方法）上使用 @Transactional 注解，而不要使用在类所要实现的任何接口上。你当然可以在接口上使用 @Transactional 注解，但是这将只能当你设置了基于接口的代理时它才生效。因为注解是不能继承的，这就意味着如果你正在使用基于类的代理时，那么事务的设置将不能被基于类的代理所识别，而且对象也将不会被事务代理所包装（将被确认为严重的）。因此，请接受Spring团队的建议并且在具体的类上使用 @Transactional 注解。
+5. 如果异常被try｛｝catch｛｝了，事务就不回滚了，如果想让事务回滚必须再往外抛try｛｝catch｛throw Exception｝。
+6. 使用了@Transactional的方法，对同一个类里面的方法调用， @Transactional无效。比如有一个类Test，它的一个方法A，A再调用Test本类的方法B（不管B是否public还是private），但A没有声明注解事务，而B有。则外部调用A之后，B的事务是不会起作用的。（经常在这里出错）
+7. 放在方法上的注解会覆盖类上边的注解的参数属性。
