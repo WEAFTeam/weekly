@@ -1,11 +1,12 @@
 ---
 title: Java中List和ArrayList的区别
-date: 2018-06-23 19:10:07
 tags: 面试
 mathjax: true
 category: JAVA
 author: Leno
 thumbnail: 'https://i.loli.net/2018/06/23/5b2e336b43133.png'
+abbrlink: e85880
+date: 2018-06-23 19:10:07
 ---
 
 >开始补博客了~从5月初到现在应该有8篇博客需要补，废话不多说，开始写吧~
