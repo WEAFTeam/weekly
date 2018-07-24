@@ -1,11 +1,12 @@
 ---
 title: StackOverflow上简单数字识别案例学习
-date: 2018-07-24 12:59:38
 tags: OpenCV-Python
 mathjax: true
 category: OCR
 author: Leno
-thumbnail: 'https://i.loli.net/2018/07/23/5b558a1894a20.png'
+thumbnail: 'https://i.loli.net/2018/07/24/5b56e06b958cf.png'
+abbrlink: 8b09dcdd
+date: 2018-07-24 12:59:38
 ---
 
 >正如题目那样，这次的学习是StackOverflow上的一个案例，它的地址为[https://stackoverflow.com/questions/9413216/simple-digit-recognition-ocr-in-opencv-python](https://stackoverflow.com/questions/9413216/simple-digit-recognition-ocr-in-opencv-python)，但是源地址上的代码略微有点旧，很多函数在OpenCV3中有了些许的改动，所以我还是会贴上我自己改正过后的代码，然后附上我对作者的思路的理解整理以及对所有代码的理解，如有问题，欢迎和我进行沟通交流，邮箱地址：cliugeek@us-forever.com
