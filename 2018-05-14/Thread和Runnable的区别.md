@@ -1,11 +1,12 @@
 ---
 title: Thread和Runnable的区别
-date: 2018-07-23 15:32:42
 tags: 面试
 mathjax: true
 category: JAVA
 author: Leno
 thumbnail: 'https://i.loli.net/2018/07/23/5b558a1894a20.png'
+abbrlink: 42fb2e58
+date: 2018-07-23 15:32:42
 ---
 
 >两周的小暑假也算是过完了，接下来得好好做东西了，博客从今天开始也要跟上进度了。
