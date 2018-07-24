@@ -7,6 +7,7 @@ author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/springboot.png'
 category: JAVA
+abbrlink: 1cf77d1e
 date: 2018-05-17 02:04:44
 ---
 一、简介
