@@ -7,7 +7,8 @@ author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/lombok-logo.png'
 category: JAVA
-date: 2018-05-27s 02:04:44
+date: '2018-05-27 02:04:44'
+abbrlink: 3859dc89
 ---
 一、简介
 ======
@@ -28,10 +29,10 @@ date: 2018-05-27s 02:04:44
 
 ### 4) 安装完成之后，请确认eclipse安装路径下是否多了一个lombok.jar包，并且其
 
-	配置文件eclipse.ini中是否 添加了如下内容: 
-    	-javaagent:lombok.jar 
-    	-Xbootclasspath/a:lombok.jar 
-	如果上面的答案均为true，那么恭喜你已经安装成功，否则将缺少的部分添加到相应的位置即可 
+	配置文件eclipse.ini中是否 添加了如下内容:
+    	-javaagent:lombok.jar
+    	-Xbootclasspath/a:lombok.jar
+	如果上面的答案均为true，那么恭喜你已经安装成功，否则将缺少的部分添加到相应的位置即可
 ### 5) 重启eclipse或myeclipse
 ![lombok-2](https://weaf.oss-cn-beijing.aliyuncs.com/lombok-2.png)
 2.IntelliJ IDEA安装

@@ -1,7 +1,7 @@
 ---
 title: 如何理解丘奇计数
 author: MisLink
-thumbnail: 'http://ourm7pfm2.bkt.clouddn.com/18-4-9/67032850.jpg'
+thumbnail: 'https://user-images.githubusercontent.com/8280169/43657984-f527d3f4-9789-11e8-8559-2fdf6f048631.png'
 abbrlink: cd89a3b2
 date: 2018-04-08 03:39:29
 tags:

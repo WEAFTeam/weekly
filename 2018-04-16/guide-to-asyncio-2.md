@@ -1,7 +1,7 @@
 ---
 title: asyncio 不完全指北（二）
 author: MisLink
-thumbnail: 'http://ourm7pfm2.bkt.clouddn.com/18-4-16/9617370.jpg'
+thumbnail: 'https://user-images.githubusercontent.com/8280169/43657842-879ee0e8-9789-11e8-9f1b-3ebbf9ceadc7.png'
 abbrlink: 84801e4e
 date: 2018-04-24 23:43:20
 tags:

@@ -4,7 +4,7 @@ author: MisLink
 abbrlink: 39277c31
 date: 2018-03-18 21:38:54
 tags:
-thumbnail: http://ourm7pfm2.bkt.clouddn.com/18-3-18/10592292.jpg
+thumbnail: 'https://user-images.githubusercontent.com/8280169/43658061-4b5388d6-978a-11e8-8f93-0244c69035f5.png'
 ---
 
 ## 前言
