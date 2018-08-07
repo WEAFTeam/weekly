@@ -4,7 +4,7 @@ abbrlink: b496f296
 date: 2018-04-15 03:37:56
 tags:
 author: MisLink
-thumbnail: http://ourm7pfm2.bkt.clouddn.com/18-4-16/9617370.jpg
+thumbnail: https://user-images.githubusercontent.com/8280169/43657842-879ee0e8-9789-11e8-9f1b-3ebbf9ceadc7.png
 ---
 
 ## 前言
