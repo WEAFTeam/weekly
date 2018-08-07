@@ -7,7 +7,8 @@ author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/lombok-logo.png'
 category: JAVA
-date: 2018-05-27s 02:04:44
+date: '2018-05-27s 02:04:44'
+abbrlink: 3859dc89
 ---
 一、简介
 ======
