@@ -8,6 +8,7 @@ author:
 thumbnail: 'https://redisson.org/assets/logos/logo.png'
 category: JAVA
 date: '2018-06-05 02:04:44'
+abbrlink: eae731fe
 ---
 一、简介
 ======
