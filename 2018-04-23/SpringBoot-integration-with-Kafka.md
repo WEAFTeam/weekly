@@ -5,7 +5,7 @@ tags:
   - JAVA
 author:
   - earth
-thumbnail: 'http://kafka.apache.org/images/logo.png'
+thumbnail: 'https://kafka.apache.org/images/logo.png'
 category: JAVA
 abbrlink: 23949c22
 date: 2018-04-23 18:13:02
