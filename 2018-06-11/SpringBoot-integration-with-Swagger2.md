@@ -11,7 +11,7 @@ date: '2018-06-11 02:04:44'
 ---
 一、简介
 =========
-Swagger2是一款可以生成RESTful接口文档的工具。而且书写起来很方便，开发人员只需维护代码，不用额外书写文档。使用起来跟方便，而且呈现的方式很棒。还支持在线测试。
+Swagger2是一款可以生成RESTful接口文档的工具。而且书写起来很方便，开发人员只需维护代码，不用额外书写文档。使用起来更方便，而且呈现的方式很棒。还支持在线测试。
 
 二、SpringBoot集成
 =========
@@ -31,8 +31,7 @@ Swagger2是一款可以生成RESTful接口文档的工具。而且书写起来�
 		<artifactId>springfox-swagger-ui</artifactId>
 		<version>2.9.2</version>
 	</dependency>
-
-	<!-- end swagger -->
+<!-- end swagger -->
 ```
 
 配置文件
