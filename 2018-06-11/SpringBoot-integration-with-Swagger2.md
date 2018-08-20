@@ -21,16 +21,16 @@ Swagger2是一款可以生成RESTful接口文档的工具。而且书写起来�
 
 ``` xml
 <!-- start swagger -->
-	<dependency>
-		<groupId>io.springfox</groupId>
-		<artifactId>springfox-swagger2</artifactId>
-		<version>2.9.2</version>
-	</dependency>
-	<dependency>
-		<groupId>io.springfox</groupId>
-		<artifactId>springfox-swagger-ui</artifactId>
-		<version>2.9.2</version>
-	</dependency>
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger2</artifactId>
+	<version>2.9.2</version>
+</dependency>
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger-ui</artifactId>
+	<version>2.9.2</version>
+</dependency>
 <!-- end swagger -->
 ```
 
