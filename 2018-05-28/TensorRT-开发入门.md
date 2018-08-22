@@ -1,11 +1,12 @@
 ---
 title: TensorRT-开发入门
-date: 2018-08-12 17:56:37
 tags: TensorRT
 category: TensorRT
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/08/12/PcyZQ0.png'
 author: Milittle
+abbrlink: e0818c8b
+date: 2018-08-12 17:56:37
 ---
 
 # TensorRT-开发入门
