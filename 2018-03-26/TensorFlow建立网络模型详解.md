@@ -1,5 +1,5 @@
 ---
-title: TensorFlow 建立网络模型
+title: TensorFlow建立网络模型详解
 tags: TensorFlow
 category: TensorFlow
 author: milittle

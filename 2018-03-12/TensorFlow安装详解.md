@@ -1,5 +1,5 @@
 ---
-title: chapter-01-AIR
+title: TensorFlow安装详解
 tags: TensorFlow
 mathjax: true
 category: TensorFlow

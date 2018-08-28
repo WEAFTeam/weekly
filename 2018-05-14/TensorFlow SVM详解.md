@@ -1,5 +1,5 @@
 ---
-title: chapter-10-AIR
+title: TensorFlow SVM详解
 tags: TensorFlow
 category: TensorFlow
 mathjax: true

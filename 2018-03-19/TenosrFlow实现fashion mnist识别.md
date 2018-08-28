@@ -1,5 +1,5 @@
 ---
-title: TensorFlow 初体验 （Fashion-mnist）
+title: TensorFlow实现fashion mnist识别
 abbrlink: b0821049
 date: 2018-03-25 21:18:37
 tags: TensorFlow

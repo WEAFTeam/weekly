@@ -1,5 +1,5 @@
 ---
-title: chapter-06-AIR
+title: TensorFLow 基础（3）
 tags: TensorFlow
 category: TensorFlow
 mathjax: true

@@ -1,5 +1,5 @@
 ---
-title: chapter-09-AIR
+title: TensorFlow逻辑回归详解
 tags: TensorFlow
 category: TensorFlow
 mathjax: true

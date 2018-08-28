@@ -1,5 +1,5 @@
 ---
-title: chapter-08-AIR
+title: TensorFlow线性回归详解（2）
 tags: TensorFlow
 category: TensorFlow
 mathjax: true
