@@ -5,6 +5,7 @@ category: TensorFlow
 mathjax: true
 author: Milittle
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
+abbrlink: cd5ba0c4
 date: 2018-09-02 22:31:21
 ---
 

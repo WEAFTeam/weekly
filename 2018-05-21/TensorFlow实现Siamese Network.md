@@ -12,11 +12,11 @@ date: 2018-05-29 11:27:34
 # TensorFlow 实现Siamese Network
 
 1. 这次我们来实现一个基于lenet的Siamese Network，大家如果想了解Siamese Network，给大家推荐Andrew NG的课[deeplearning.ai](https://www.coursera.org/learn/convolutional-neural-networks/lecture/bjhmj/siamese-network)作为了解
-2. 接下来我们直接上code：大家也可以直接移步到我的github 仓库里面找代码[代码](https://github.com/Milittle/MLModel/blob/milittle/siameasenetwork/mnist/train.py)
+2. 接下来我们直接上code：大家也可以直接移步到我的github 仓库里面找代码[代码](https://github.com/Milittle/MLModel/tree/master/siamease_network)
 
 ```
 代码目录组织结构：
-siameasenetwork
+siamese_network
 	__init__.py
 	mnist：
 		__init__.py
@@ -40,9 +40,9 @@ train.py
 import tensorflow as tf
 import numpy as np
  
-from siameasenetwork.mnist import util # 这是外部依赖文件
-from siameasenetwork.mnist.DataShuffler import * #这是打乱数据文件
-from siameasenetwork.mnist.lenet import Lenet # 主网络结构
+from siamese_network.mnist import util # 这是外部依赖文件
+from siamese_network.mnist.DataShuffler import * #这是打乱数据文件
+from siamese_network.mnist.lenet import Lenet # 主网络结构
 
 SEED = 10
 
@@ -172,7 +172,7 @@ def main():
 
     # Creating the variables
     lenet_architecture = Lenet(seed=SEED, use_gpu=USE_GPU)
-    # Siamease place holders - Training
+    # Siamese place holders - Training
     train_left_data = tf.placeholder(tf.float32, shape=(BATCH_SIZE*2, 28, 28, 1), name="left")
     train_right_data = tf.placeholder(tf.float32, shape=(BATCH_SIZE*2, 28, 28, 1), name="right")
     labels_data = tf.placeholder(tf.int32, shape=BATCH_SIZE*2)
@@ -180,7 +180,7 @@ def main():
     lenet_train_left = lenet_architecture.create_lenet(train_left_data)
     lenet_train_right = lenet_architecture.create_lenet(train_right_data)
 
-    # Siamease place holders - Validation
+    # Siamese place holders - Validation
     validation_data = tf.placeholder(tf.float32, shape=(data_shuffler.validation_data.shape[0], 28, 28, 1), name="validation")
     labels_data_validation = tf.placeholder(tf.int32, shape=BATCH_SIZE_TEST)
     # Creating the graphs for validation
@@ -308,7 +308,7 @@ if __name__ == '__main__':
 
 lenet.py
 
-```
+```python
 #!/usr/bin/env python
 # vim: set fileencoding=utf-8 :
 # @author: Tiago de Freitas Pereira <tiago.pereira@idiap.ch>
@@ -434,7 +434,7 @@ class Lenet(object):
 
 util.py
 
-```
+```python
 #!/usr/bin/env python
 # vim: set fileencoding=utf-8 :
 # @author: Tiago de Freitas Pereira <tiago.pereira@idiap.ch>
@@ -733,7 +733,7 @@ def compute_acc(data_val, labels_val):
 
 DataShuffler.py
 
-```
+```python
 #!/usr/bin/env python
 # vim: set fileencoding=utf-8 :
 # @author: Tiago de Freitas Pereira <tiago.pereira@idiap.ch>
@@ -928,3 +928,4 @@ class DataShuffler(object):
         return data_a, data_p, data_n, labels_a, labels_p, labels_n
 ```
 
+email: air@weaf.top
