@@ -5,7 +5,7 @@ tags:
   - 区块链
 author:
   - earth
-thumbnail: 'http://weaf.oss-cn-beijing.aliyuncs.com/blockchain.jpg'
+thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/blockchain.jpg'
 category: 区块链
 date: '2018-10-17 09:04:44'
 ---
