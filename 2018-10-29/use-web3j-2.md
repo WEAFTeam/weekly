@@ -133,10 +133,10 @@ try {
     if (transactionReceipt1 == null) {
         log.warn("转账Hash内容为空，Hash = 【{}】",transactionHash);
     }else {
-        if ("0x0".equals(transactionReceipt1.getStatus())){
+        if ("0x1".equals(transactionReceipt1.getStatus())){
             log.info("转账成功！ Hash = {}",transactionHash)
         }
-        if ("0x1".equals(transactionReceipt1.getStatus())){
+        if ("0x0".equals(transactionReceipt1.getStatus())){
             log.error("转账失败！ Hash = {}",transactionHash)
         }
     }
