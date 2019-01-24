@@ -96,7 +96,7 @@ nodeos -e -p eosio \
 --filter-on='*' >> nodeos.log 2>&1 &
 ```
 ![eos-3](https://weaf.oss-cn-beijing.aliyuncs.com/eos-3.png)
-启动节点后我们可以看到当前目录下有一个**nodeos.log**的文件，这个是本地节点的log输出文件，我们使用tail 命令来动态的查看输出
+启动节点后我们可以看到当前目录下有一个**nodeos.log**的文件，这个是本地节点的log输出文件，我们使用**tail**命令来动态的查看输出
 
 ```shell
 tail -fn 400 nodeos.log
