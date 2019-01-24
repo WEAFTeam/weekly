@@ -48,7 +48,7 @@ EOS，可以理解为Enterprise Operation System，即为商用分布式应用�
 5. [Visual Studio Code:https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 我这边使用的是一个编辑器，并没有使用编译器，配置环境比较麻烦。
-如果有需要我这里有看到两篇，大家可以借鉴：
+如果有需要我这里有两篇，大家可以借鉴：
 
 1. [Visual Studio Code Setup:https://infinitexlabs.com/setup-ide-for-eos-development/](https://infinitexlabs.com/setup-ide-for-eos-development/)
 2. [CLion Setup: https://infinitexlabs.com/setup-ide-for-eos-development/](https://infinitexlabs.com/setup-ide-for-eos-development/)
@@ -56,7 +56,7 @@ EOS，可以理解为Enterprise Operation System，即为商用分布式应用�
 四、准备环境
 ===============
 ### 1.创建一个开发相关的目录
-这里我我在当前用户根目录下创建一个eos目录，并在下边创建一个contracts目录存放合约。
+这里我在当前用户根目录下创建一个eos目录，并在下边创建一个contracts目录存放合约文件。
 
 ``` shell
 cd ~
