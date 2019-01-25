@@ -44,8 +44,8 @@ date: '2019-01-25 13:49:23'
 |cleos wallet keys         |cleos wallet keys                                          |可以列出当前所有解锁的钱包的公钥|因为现在我们还没创建任何key所以显示是一个空数组**[]**|
 |cleos wallet create_key   |cleos wallet create_key                                    |**-n**参数，指定key的钱包在哪个，默认是**default**,然后我们可以使用keys命令来查看|![eos-16](https://weaf.oss-cn-beijing.aliyuncs.com/eos-16.png)|
 |cleos wallet remove_key   |cleos wallet remove_key KEY -n WALLET_NAME                 |这里指定了钱包还需要指定key,并且还得输入密码 也可以使用 __--password xxxxxxxx__ 来指定密码，不指定钱包默认是**default**|![eos-17](https://weaf.oss-cn-beijing.aliyuncs.com/eos-17.png)|
-|cleos wallet import       |cleos wallet import --private-key PRIVATE_KEY -n WALLET_NAME|这里我们指定私钥来导入key,我们使用**-n**来指定导入的钱包，不指定钱包默认是**default**|![eos-18](https://weaf.oss-cn-beijing.aliyuncs.com/eos-18.png)|
-|cleos wallet private_keys |cleos wallet private_keys                                  |列出钱包的私钥，我们使用**-n**来指定钱包，不指定钱包默认是**default**，也可以使用**--password xxxxxxxx** 来指定密码|![eos-19](https://weaf.oss-cn-beijing.aliyuncs.com/eos-19.png)|
+|cleos wallet import       |cleos wallet import --private-key PRIVATE_KEY -n WALLET_NAME|这里我们指定私钥来导入key,我们使用 __-n__ 来指定导入的钱包，不指定钱包默认是**default**|![eos-18](https://weaf.oss-cn-beijing.aliyuncs.com/eos-18.png)|
+|cleos wallet private_keys |cleos wallet private_keys                                  |列出钱包的私钥，我们使用 __-n__ 来指定钱包，不指定钱包默认是**default**，也可以使用**--password xxxxxxxx** 来指定密码|![eos-19](https://weaf.oss-cn-beijing.aliyuncs.com/eos-19.png)|
 |cleos wallet stop         |cleos wallet stop                                          |(这个我没有用过，一般不会用到)||
 
 ### 2.wallet实践
