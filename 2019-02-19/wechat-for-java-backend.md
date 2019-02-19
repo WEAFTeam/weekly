@@ -10,6 +10,7 @@ category: JAVA
 date: 2019-02-19 18:13:02
 ---
 继之前的微信公众号实现，现在第二篇来袭，写了一些最基本的使用和配置。
+
 一、申请公众号
 -------
 此次我们开发使用的是服务号，大部分微信接口都是拥有权限的。
@@ -18,6 +19,7 @@ date: 2019-02-19 18:13:02
 这个我们可以根据权限文档进行查看！
 
 [接口权限：https://mp.weixin.qq.com/advanced/advanced?action=table&token=1776791094&lang=zh_CN](https://mp.weixin.qq.com/advanced/advanced?action=table&token=1776791094&lang=zh_CN)
+
 二、设置基本配置
 ---------
 这里最基本的**基本配置**在上一节中我们已经说到了，这里我们需要配置一些其他的东西。
