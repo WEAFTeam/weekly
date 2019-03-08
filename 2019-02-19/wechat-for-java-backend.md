@@ -7,6 +7,7 @@ author:
   - earth
 thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/wechat-logo.png'
 category: JAVA
+abbrlink: 5e9a3b51
 date: 2019-02-19 18:13:02
 ---
 继之前的微信公众号实现，现在第二篇来袭，写了一些最基本的使用和配置。

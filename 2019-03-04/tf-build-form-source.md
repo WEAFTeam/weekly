@@ -1,11 +1,12 @@
 ---
 title: 从源码构建TensorFlow2.0
-date: 2019-03-05 19:07:57
 category: TensorFlow
 tags: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: Milittle
+abbrlink: c05ce623
+date: 2019-03-05 19:07:57
 ---
 
 ### 从源码安装TensorFlow（未发布版本2.0）
