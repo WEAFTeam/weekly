@@ -1,11 +1,12 @@
 ---
-title: tf-2.0-effective-info
-date: 2019-03-08 16:03:04
+title: 如何高效使用TensorFlow2.0
 category: TensorFlow
 tags: TensorFlow
 mathjax: true
 thumbnail: 'https://s1.ax1x.com/2018/03/18/9oakkQ.png'
 author: Milittle
+abbrlink: 417f83c9
+date: 2019-03-08 16:03:04
 ---
 
 ## 如何高效使用TensorFlow2.0
