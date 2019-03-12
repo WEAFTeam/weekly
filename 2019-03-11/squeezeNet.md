@@ -1,11 +1,12 @@
 ---
 title: squeezeNet
-date: 2019-03-12 10:18:32
 tags: DL-Network
 category: DL-Network
 mathjax: true
 thumbnail: 'https://s2.ax1x.com/2019/03/12/APyGkQ.png'
 author: Milittle
+abbrlink: f6579676
+date: 2019-03-12 10:18:32
 ---
 
 [Milittle Github Repo]()
@@ -36,7 +37,7 @@ SqueezeNet CNN Architectural Design Strategies:
 
 ### Fire Module
 
-![Fire Module](D:/workspace/OneDrive%20-%20stu.xjtu.edu.cn/study/repository/awesome-dl-network/image/squeezeNet_fire_module.jpg)
+![Fire Module](https://s2.ax1x.com/2019/03/12/APyvB8.jpg)
 
 在以上的Fire Module中，有一个squeeze层核expand层。squeeze层只有1X1卷积核。（使用到了strategy1）expand层有1X1卷积核和3X3卷积核。文章中指出该Fire Module有三个超参配置分别为：
 $$
@@ -44,11 +45,11 @@ s_{1x1}:所有squeeze层的卷积核个数\\
 e_{1x1}:所有expand层1X1的卷积核个数\\
 e_{3x3}:所有expand层3X3的卷积核个数
 $$
-设定$s_{1x1} 小于 e_{1x1} + e_{3x3}$,这样就是strategy2。
+设定$s_{1x1} 小于 e_{1x1} + e_{3x3}​$,这样就是strategy2。
 
 ### SqueezeNet Architecture
 
-![Architecture](D:/workspace/OneDrive%20-%20stu.xjtu.edu.cn/study/repository/awesome-dl-network/image/squeezeNet_Architecture.jpg)
+![Architecture](https://s2.ax1x.com/2019/03/12/AP6SAg.md.jpg)
 
 1. 以上是SqueezeNet网络结构，第1层普通卷积层，2-9都是上述提到的Fire Module，第10层也是一个普通的卷积层。
 2. 在卷积层1、模块4、模块8、加入maxpool，步长为2。
@@ -56,7 +57,7 @@ $$
 
 ### 网络整个架构维度表
 
-![](D:/workspace/OneDrive%20-%20stu.xjtu.edu.cn/study/repository/awesome-dl-network/image/squeezeNet_Architecture_dimensions.jpg)
+![](https://s2.ax1x.com/2019/03/12/APyxHS.jpg)
 
 ### 实现细节
 
