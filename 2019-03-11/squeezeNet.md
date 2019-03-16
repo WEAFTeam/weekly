@@ -9,8 +9,6 @@ abbrlink: f6579676
 date: 2019-03-12 10:18:32
 ---
 
-[Milittle Github Repo]()
-
 [Milittle Github Repo](https://github.com/Milittle/awesome-dl-network) 系列Repo
 
 ## SqueezeNet
@@ -64,12 +62,13 @@ $$
 1. 1X1和3X3卷积核输出的feature map大小一致，因为在3X3中加入了padding。
 2. 在squeeze层和expand层都加入了Relu激活函数。
 3. 在Fire9后面加入了Dropout层，丢弃概率为0.5。
-4. squeezeNet没有全连接层。
-5. 初始学习率设置为0.04。在训练的过程中逐渐减小学习率。
+4. 初始学习率设置为0.04。在训练的过程中逐渐减小学习率。
 
 QQ: 329804334
 
-Mail：milittle@stu.xjtu.edu.cn
+Website: www.weaf.top
+
+Mail：air@weaf.top
 
 备注： 文档中图都来自原论文。
 
