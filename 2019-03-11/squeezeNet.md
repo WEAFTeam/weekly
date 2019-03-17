@@ -3,7 +3,7 @@ title: squeezeNet
 tags: DL-Network
 category: DL-Network
 mathjax: true
-thumbnail: 'https://s2.ax1x.com/2019/03/12/APyGkQ.png'
+thumbnail: 'https://s2.ax1x.com/2019/03/12/AP6SAg.md.jpg'
 author: Milittle
 abbrlink: f6579676
 date: 2019-03-12 10:18:32
@@ -66,9 +66,11 @@ $$
 
 QQ: 329804334
 
-Website: www.weaf.top
+Website:  www.weaf.top
 
-Mail：air@weaf.top
+Mail: air@weaf.top
+
+Github: https://github.com/Milittle
 
 备注： 文档中图都来自原论文。
 
