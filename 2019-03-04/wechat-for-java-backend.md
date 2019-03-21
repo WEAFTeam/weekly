@@ -218,7 +218,7 @@ public Map<String, String> sign(String url, HttpSession session) {
 
 1. 微信工作平台技术文档：[https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1445241432](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1445241432)
 2. 微信网页授权文档：[https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842)
-3. 
+3. 微信js-sdk：[https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
 
 
 
