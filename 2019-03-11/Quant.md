@@ -1,11 +1,12 @@
 ---
 title: 量化算法的一个总结
-date: 2019-03-17 17:06:17
 tags: Quantization
 category: Quantization
 mathjax: true
 thumbnail: 'https://s2.ax1x.com/2019/03/17/AeYUk4.png'
 author: Milittle
+abbrlink: a568820a
+date: 2019-03-17 17:06:17
 ---
 
 > https://nervanasystems.github.io/distiller/algo_quantization/index.html

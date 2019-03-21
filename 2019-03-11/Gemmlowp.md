@@ -1,11 +1,12 @@
 ---
 title: Gemmlowp
-date: 2019-03-17 17:12:39
 tags: Quantization
 category: Quantization
 mathjax: true
 thumbnail: 'https://s2.ax1x.com/2019/03/17/AeYUk4.png'
 author: Milittle
+abbrlink: 483c820c
+date: 2019-03-17 17:12:39
 ---
 
 ### Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference 

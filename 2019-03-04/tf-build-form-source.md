@@ -11,6 +11,8 @@ date: 2019-03-05 19:07:57
 
 ### 从源码安装TensorFlow（未发布版本2.0）
 
+### 下面第8点有一个单独的补充，是我一开始发布文章时候没有加进去的，我们在tag2.0上编译的版本应该是还是v1的默认执行流程，所以需要打开v2的behavior，这样我们就可以享受tf2.0的eager excution了。
+
 #### 1. 今天想尝一尝tf2.0的鲜，就尝试去从源码构建TensorFlow2.0版本的GPU wheel包。
 
 #### 2.首先你需要准备一些什么：
@@ -156,7 +158,18 @@ bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_
 pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl
 ```
 
-#### 8. 结语
+#### 8. 补充一点
+
+20190321 补充一点，在实验的时候，我们编译的版本默认没有开启eager execution，所以我们需要在使用的时候开启tf2.0 eager execution。以下方式是在命令行里使用的方式，在Pycharm IDE中，你可以直接在创建图之前，使用`tf.compat.v1.enable_v2_behavior()`来开启tf2.0的eager execution方式。
+
+```shell
+$python
+>>> import tensorflow as tf
+>>> tf.compat.v1.enable_v2_behavior() #这样就开启了tf2.0默认的eager execution
+>>> tf.add(1, 2).numpy() # 你就可以直接得到1 + 2的值。
+```
+
+#### 9. 结语
 
 今天为了尝试一下从源码安装TensorFlow，这样的好处是以后可以根据自己的需求定制编译，然后使得自己的机器性能达到最大化，在这个过程中也学到了很多。大家有什么问题可以联系我：
 
