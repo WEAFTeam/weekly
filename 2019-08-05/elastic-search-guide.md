@@ -142,7 +142,7 @@ private ElasticsearchTemplate elasticsearchTemplate;
 四、Kibana的使用
 ========
 
-Kibana 是以web的形式展现给用户的，我们可以通过访问**http://localhost:5601**来进行查看
+Kibana 是以web的形式展现给用户的，我们可以通过访问**http://localhost:5601** 来进行查看
 
 一些具体的使用请查看官方文档[官方指南：https://www.elastic.co/guide/en/kibana/current/getting-started.html](https://www.elastic.co/guide/en/kibana/current/getting-started.html)
 
