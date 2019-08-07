@@ -1,3 +1,14 @@
+---
+title: Android view 绘制流程
+description: Android view 绘制流程
+tags:
+  - ANDROID
+author:
+  - 夏沫
+thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/android.jpg'
+category: ANDROID
+date: '2019-07-20 18:34:04'
+---
 # 1:Measure
 measure之前，我们先了解下测量模式Measurespec。
 ## 1.1：Measurespec（测量模式）
