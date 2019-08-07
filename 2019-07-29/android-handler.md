@@ -1,3 +1,14 @@
+---
+title: Android Handler相关
+description: Android Handler相关
+tags:
+  - ANDROID
+author:
+  - 夏沫
+thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/android.jpg'
+category: ANDROID
+date: '2019-07-25 14:15:39'
+---
 # 1：handler使用
 handler有两个用途：
 1：安排消息或者runnable在某个时间执行
