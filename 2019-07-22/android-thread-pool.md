@@ -1,3 +1,14 @@
+---
+title: Android线程池简介
+description: Android线程池简介
+tags:
+  - ANDROID
+author:
+  - 夏沫
+thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/android.jpg'
+category: ANDROID
+date: '2019-07-22 02:04:44'
+---
 # 1:线程池的优点
 1：相比new thread 来说，线程池复用线程，减少频繁创建的线程的开销，性能更佳；
 2：可有效控制最大并发数，避免线程过大抢占资源导致线程阻塞；
