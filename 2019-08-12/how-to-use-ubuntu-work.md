@@ -1,3 +1,14 @@
+---
+title: 用Ubuntu搭建工作环境
+description: 用Ubuntu搭建工作环境
+tags:
+  - Linux
+author:
+  - earth
+thumbnail: 'https://songyaxu.oss-cn-beijing.aliyuncs.com/blog/ubuntu.png'
+category: Linux
+date: '2019-08-015 10:34:45'
+---
 用Ubuntu搭建工作环境
 =========
 
@@ -170,17 +181,108 @@ sudo ./install.sh
 [deepin wine foxmail](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.foxmail/)
 
 ### 安装QQ
+当前安装基于deepin wine,我们在阿里云镜像下载中心下载QQ的包。然后点击安装就可以了。
+
+[deepin wine qq](https://mirrors.aliyun.com/deepin/pool/non-free/d/deepinwine-qq/)
+
 
 ### 安装钉钉
+在阿里云镜像中心下载相应安装包，点击安装就可以了。
+
+[dingtalk](http://mirrors.aliyun.com/deepin/pool/non-free/d/dingtalk/)
+
 
 ### 安装企业微信
+当前安装基于deepin wine,我们在阿里云镜像下载中心下载企业微信的包。然后点击安装就可以了。
+
+[deepin wine wxwork](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.weixin.work/)
 
 ### 安装网易云音乐 
 
 网易云音乐还是很良心的，这边官网直接支持Ubuntu18.04安装包的下载。
-[下载](https://music.163.com/#/download)后双击安装即可。
 
+[网易云音乐](https://music.163.com/#/download)后双击安装即可。
 
+### 安装FTP工具
 
+这边可以选择使用在带的Remmina远程桌面客户端,带有RDP、SFTP、SSH、VNC等协议的连接。
+或者我们这边可以下载ilezilla
+``` shell
+sudo apt-get install filezilla
+```
+
+### 安装Postman
+Postman我们直接可以在官网上下载linux版本进行安装，简单方便。
+
+[Postman](https://www.getpostman.com/downloads/)
+
+###安装pdf阅读器
+
+福昕pdf阅读器是非常好的一个阅读器，我们可以再官网下载并安装。
+
+[foxit](https://www.foxitsoftware.cn/)
+
+四、其他配置
+----------
+
+### 配置快速启动
+有时候一些应用没有快速启动方式，每次启动都需要使用控制台，并留下一个无法关闭的窗口，
+我们可以通过一下方式配置快速启动图标。
+``` shell
+cd /usr/share/applications
+```
+切换到**/usr/share/applications**目录，我们这里以postman为例，创建一个叫postman.desktop的文件，并输入一下内容。
+``` desktop
+[Desktop Entry]
+
+Encoding=UTF-8
+
+Name=Postman
+
+Exec=/app/Postman/app/Postman
+
+Icon=/app/Postman/app/resources/app/assets/icon.png
+
+Terminal=false
+
+Type=Application
+
+Categories=Development;
+```
+点击显示应用程序就可以看到我们设置的快速启动图标的应用程序了。
+
+### 快速截图
+使用**shift+PrtScr**快捷键创建快速选取截屏，非常好用哦。保存的文件放在当前用户下的**图片**文件夹里边
+
+### 显示微信等应用托盘
+
+安装TopIconPlus的gnome-shell扩展。
+``` shell
+sudo apt-get install gnome-shell-extension-top-icons-plus gnome-tweaks
+```
+然后用r命令重启gnome-shell，最后用gnome-tweaks开启这个扩展。
+
+### 乱码问题
+
+我们首先拷贝windows的所有字体到**usr/local/share/fonts**下，然后使用以下命令更新我们系统的字体。
+``` shell
+fc-cache -fv
+```
+其他乱码可以参考以下文章
+[ubuntu 18.04 下 wine 中文无法正常显示的解决方案](https://blog.abreto.net/archives/2018/05/ubuntu-18-04-wine-chinese-problem-solution.html)
+
+### 其他软件的安装
+可以到一下地址去寻找安装包
+
+[阿里云镜像下载中心](https://mirrors.aliyun.com/deepin/pool/non-free/)
+
+五、参考文档
+----------
+
+1. [工作环境换成Ubuntu18.04小记](https://www.cnblogs.com/dunitian/p/9773214.html)
+2. [Ubuntu常用软件安装（小集合）](https://www.cnblogs.com/dunitian/p/6670560.html)
+3. [2019年wine QQ最完美解决方案](https://www.lulinux.com/archives/1319)
+4. [ubuntu 18.04 下 wine 中文无法正常显示的解决方案](https://blog.abreto.net/archives/2018/05/ubuntu-18-04-wine-chinese-problem-solution.html)
+5. [记 Win10 + Ubuntu18.04 安装](https://www.cnblogs.com/tanrong/p/9166595.html)
 
 
