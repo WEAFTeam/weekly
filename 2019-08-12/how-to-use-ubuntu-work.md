@@ -206,7 +206,7 @@ sudo ./install.sh
 ### 安装FTP工具
 
 这边可以选择使用在带的Remmina远程桌面客户端,带有RDP、SFTP、SSH、VNC等协议的连接。
-或者我们这边可以下载ilezilla
+或者我们这边可以下载filezilla
 ``` shell
 sudo apt-get install filezilla
 ```
