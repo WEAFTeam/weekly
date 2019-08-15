@@ -221,6 +221,31 @@ Postman我们直接可以在官网上下载linux版本进行安装，简单方�
 福昕pdf阅读器是非常好的一个阅读器，我们可以再官网下载并安装。
 
 [foxit](https://www.foxitsoftware.cn/)
+### 安装navicat
+这边直接安装了Navicat Premium 11版本，然后根据破解方法，自写了以下脚本
+``` sh
+#!/bin/sh
+echo "start_navicat"
+echo "delete user.reg"
+cd /home/songyaxu/.navicat64/
+rm user.reg
+echo "delete successful"
+/usr/share/navicat/start_navicat
+``` 
+放在navicat的安装目录** /usr/share/navicat ** 下（其中**user.reg**需找到自己相对用户的文件夹下）
+然后找到快速启动图标文件将内容改成以下内容。
+``` desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=Navicat
+Exec=/usr/share/navicat/navicatstart.sh
+Icon=navicat
+Categories=Development;
+```
+主要改了**Exec**项
+以上文件在**/usr/share/applications/navicat.desktop**
 
 四、其他配置
 ----------
