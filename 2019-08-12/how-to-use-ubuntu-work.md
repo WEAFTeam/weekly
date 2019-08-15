@@ -232,7 +232,7 @@ rm user.reg
 echo "delete successful"
 /usr/share/navicat/start_navicat
 ``` 
-放在navicat的安装目录** /usr/share/navicat ** 下（其中**user.reg**需找到自己相对用户的文件夹下）
+放在navicat的安装目录 **/usr/share/navicat**  下（其中**user.reg**需找到自己相对用户的文件夹下）
 然后找到快速启动图标文件将内容改成以下内容。
 ``` desktop
 [Desktop Entry]
@@ -245,7 +245,7 @@ Icon=navicat
 Categories=Development;
 ```
 主要改了**Exec**项
-以上文件在**/usr/share/applications/navicat.desktop**
+以上文件在 **/usr/share/applications/navicat.desktop**
 
 四、其他配置
 ----------
@@ -256,7 +256,7 @@ Categories=Development;
 ``` shell
 cd /usr/share/applications
 ```
-切换到**/usr/share/applications**目录，我们这里以postman为例，创建一个叫postman.desktop的文件，并输入一下内容。
+切换到 **/usr/share/applications**目录，我们这里以postman为例，创建一个叫postman.desktop的文件，并输入一下内容。
 ``` desktop
 [Desktop Entry]
 
