@@ -232,7 +232,7 @@ npm install -g i5ting_toc
 i5ting_toc -f index.md 
 ```
 
-###安装pdf阅读器
+### 安装pdf阅读器
 
 福昕pdf阅读器是非常好的一个阅读器，我们可以再官网下载并安装。
 
