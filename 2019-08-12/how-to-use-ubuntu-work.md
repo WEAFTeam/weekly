@@ -206,7 +206,7 @@ sudo ./install.sh
 ### 安装FTP工具
 
 这边可以选择使用在带的Remmina远程桌面客户端,带有RDP、SFTP、SSH、VNC等协议的连接。
-或者我们这边可以下载filezilla
+或者我们这边可以下载ilezilla
 ``` shell
 sudo apt-get install filezilla
 ```
@@ -215,6 +215,22 @@ sudo apt-get install filezilla
 Postman我们直接可以在官网上下载linux版本进行安装，简单方便。
 
 [Postman](https://www.getpostman.com/downloads/)
+
+### Advanced REST Client
+为什么推荐这个呢，因为这个在ubuntu使用起来没问题，我使用的postman在ubuntu上json 格式输入和显示不对齐，很难受。
+而且这个用起来也是很好用！
+
+[ARC](https://github.com/advanced-rest-client)
+
+### i5ting_toc
+这是一个可以讲markdown转出html的工具，很好用。
+
+安装及使用
+``` shell
+npm install -g i5ting_toc
+
+i5ting_toc -f index.md 
+```
 
 ###安装pdf阅读器
 
@@ -232,7 +248,7 @@ rm user.reg
 echo "delete successful"
 /usr/share/navicat/start_navicat
 ``` 
-放在navicat的安装目录 **/usr/share/navicat**  下（其中**user.reg**需找到自己相对用户的文件夹下）
+放在navicat的安装目录 **/usr/share/navicat**下（其中**user.reg**需找到自己相对用户的文件夹下）
 然后找到快速启动图标文件将内容改成以下内容。
 ``` desktop
 [Desktop Entry]
@@ -256,7 +272,7 @@ Categories=Development;
 ``` shell
 cd /usr/share/applications
 ```
-切换到 **/usr/share/applications**目录，我们这里以postman为例，创建一个叫postman.desktop的文件，并输入一下内容。
+切换到**/usr/share/applications**目录，我们这里以postman为例，创建一个叫postman.desktop的文件，并输入一下内容。
 ``` desktop
 [Desktop Entry]
 
@@ -309,5 +325,4 @@ fc-cache -fv
 3. [2019年wine QQ最完美解决方案](https://www.lulinux.com/archives/1319)
 4. [ubuntu 18.04 下 wine 中文无法正常显示的解决方案](https://blog.abreto.net/archives/2018/05/ubuntu-18-04-wine-chinese-problem-solution.html)
 5. [记 Win10 + Ubuntu18.04 安装](https://www.cnblogs.com/tanrong/p/9166595.html)
-
 
