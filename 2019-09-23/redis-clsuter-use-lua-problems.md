@@ -5,9 +5,9 @@ tags:
   - java
 author:
   - earth
-thumbnail: 'https://songyaxu.oss-cn-beijing.aliyuncs.com/blog/ubuntu.png'
+thumbnail: 'https://weaf.oss-cn-beijing.aliyuncs.com/redis-logo.png'
 category: Linux
-date: '2019-09-23 10:34:45'
+date: '2019-09-23 15:12:41'
 ---
 阿里云集群版redis中使用lua脚本踩坑记录
 ===========
@@ -148,7 +148,7 @@ return value
 eval "KEYS[2] = \"stat:{\"..ARGV[1]..\"}:hit\"\n KEYS[3] = \"stat:{\"..ARGV[1]..\"}:miss\"\n local value = redis.call('get', KEYS[1])\n if ARGV[3] == \"true\"\n then\n if not value\n then\n redis.call(\"hincrby\",KEYS[3],ARGV[2],1)\n else\n redis.call('hincrby',KEYS[2],ARGV[2],1)\n end\n end\n return value" 1 test_222 test 20190927 true
 ```
 
-这边如果key定义成 {xxxxxx}\_xxxx、stat:{xxxxxx}:miss stat:{xxxxxx}:hit,是可以完成的，但是我们的key是已经存在的，而且不会更改现有逻辑去使用这种命名格斯，更不会让所以key都在一个节点上。
+这边如果key定义成 {xxxxxx}\_xxxx、stat:{xxxxxx}:miss stat:{xxxxxx}:hit,是可以完成的，但是我们的key是已经存在的，而且不会更改现有逻辑去使用这种命名格式，更不会让所以key都在一个节点上。
 
 至此踩坑结束。
 
